@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    background-color: #E5E0D5, ;
+    font-family: Verdana, Arial, Tahoma;
+    color: #776E64;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #C7BAA7;
+    text-align: left;
+    padding: 8px;
+}

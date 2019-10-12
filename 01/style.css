@@ -1,0 +1,18 @@
+body {
+    background-color: #f7ffff;
+    font-family: Verdana, Arial, Tahoma;
+}
+
+.title {
+    font-size: 16px;
+}
+
+.sub-title {
+    font-size: 12px;
+}
+
+.link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}

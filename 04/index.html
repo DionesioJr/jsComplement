@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>03</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <div class="title">Formulario</div>
+        <div class="label">
+            <label>Nome:</label>
+            <input type="text" name="nome" id="nome">
+
+        </div>
+        <div class="label">
+            <label>Latitude:</label>
+            <input type="text" name="latitude" id="latitude">
+        </div>
+        <div class="label">
+            <label>Longitude:</label>
+            <input type="text" name="longitude" id="longitude">
+        </div>
+        <div class="label">
+            <label>Descrição:</label>
+            <input type="text" name="descricao" id="descricao">
+        </div>
+        <div class="label">
+            <button onclick="validarForm();">Enviar</button>
+        </div>
+
+    </div>
+
+</body>
+<script>
+
+    function validarForm() {
+
+        let nome, latitude, longitude, descricao;
+        nome = document.getElementsByName('nome');
+        latitude = document.getElementsByName('latitude');
+        longitude = document.getElementsByName('longitude');
+        descricao = document.getElementsByName('descricao');
+
+        if (nome[0].value.length <= 255) {
+
+            if (latitude[0].value >= -90 && latitude[0].value <= 90) {
+
+                if (longitude[0].value >= -180 && longitude[0].value <= 180) {
+
+                    if (nome[0].value.length <= 2000) {
+
+                        alert("Formulario valido!!!");
+                    } else {
+                        alert("Erro: descrição invalida!!!");
+                    }
+
+                } else {
+                    alert("Erro: latitude invalida!!!");
+                }
+
+            } else {
+                alert("Erro: longitude invalida!!!");
+            }
+
+        } else {
+            alert("Erro: nome invalida!!!");
+        }
+    }
+</script>
+
+</html>
